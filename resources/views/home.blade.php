@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row">
             @foreach($trains as $train)
-            <div class="col">
-               <div class="card size">
-                    <div class="card-title">
+            <div class="col-10">
+               <div class="card my-3">
+                    <div class="card-title mx-3 my-2">
                         <h3>{{ $train->azienda }}</h3>
                     </div>
                     <div class="card-body">
@@ -14,7 +14,7 @@
                         <h6>Data di partenza: {{$train->data_di_partenza}}</h6>
                         <h6>Orario di partenza: {{$train->orario_di_partenza}}</h6>
                         <h6>Orario di arrivo: {{$train->orario_di_arrivo}}</h6>
-                        <h6>Carrozza n°: {{$train->numero_carrozze}}</h6>
+                        <h6>Carrozza n° {{$train->numero_carrozze}}</h6>
 
                         @if ($train->in_orario === 'si')
                             <h6>Il tuo treno arriverà in orario</h6> 
