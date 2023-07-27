@@ -9,8 +9,7 @@ use App\Models\Trains;
 class TrainController extends Controller
 {
     public function home(){
-        $data = date('Y-m-d', strtotime(now()));
-        $trains = Trains::where('data_di_partenza', '=', $data)->get();
+        $trains = Trains::all();
         return view('home', compact('trains'));
     }
 }

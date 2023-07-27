@@ -16,9 +16,9 @@
                         <h6>Orario di arrivo: {{$train->orario_di_arrivo}}</h6>
                         <h6>Carrozza n° {{$train->numero_carrozze}}</h6>
 
-                        @if ($train->in_orario === 'si')
+                        @if ($train->in_orario == 1)
                             <h6>Il tuo treno arriverà in orario</h6> 
-                        @elseif($train->cancellato === 'si')
+                        @elseif($train->cancellato == 1)
                             <h6>Il tuo treno è stato cancellato</h6>
                         @else
                             <h6>Il tuo treno arriverà in ritardo di 5 minuti</h6>
